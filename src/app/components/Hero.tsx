@@ -1,7 +1,9 @@
+"use client";
 import ArrowWIcon from "../assets/svg/arrowW.svg";
 import MessageImage from "../assets/images/message 1.png";
 import CursorImage from "../assets/images/cursor 2.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
@@ -26,20 +28,34 @@ export const Hero = () => {
             <h1 className="text-7xl sm:text-9xl font-bold tracking-tighter text-center inline-flex">
               One task <br /> at a Time
             </h1>
-            <Image
-              src={CursorImage}
-              height="200"
-              width="200"
-              alt="cursor image"
+            <motion.div
               className="absolute right-[476px] top-[108px] hidden sm:inline"
-            />
-            <Image
-              src={MessageImage}
-              height="200"
-              width="200"
-              alt="message image"
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={CursorImage}
+                height="200"
+                width="200"
+                alt="cursor image"
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
+            <motion.div
               className="absolute left-[498px] top-[56px] hidden sm:inline"
-            />
+              drag
+              // dragSnapToOrigin
+            >
+              <Image
+                src={MessageImage}
+                height="200"
+                width="200"
+                alt="message image"
+                className="max-w-none"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
         <div className="flex justify-center">
