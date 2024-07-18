@@ -1,6 +1,6 @@
-import logoImage from "../assets/logo.png";
+import logoImage from "../assets/images/logo.png";
 import Image from "next/image";
-import MenuIcon from "../assets/menu.svg";
+import MenuIcon from "../assets/svg/menu.svg";
 
 export const Navbar = () => {
   return (
