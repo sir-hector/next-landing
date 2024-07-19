@@ -1,4 +1,4 @@
-import IcosystemIcon from "../assets/svg/icosystemB.svg";
+import { Feature } from "./Feature";
 
 const features = [
   {
@@ -28,16 +28,7 @@ export const Features = () => {
         </div>
         <div className="mt-16 flex flex-col gap-4 sm:flex-row">
           {features.map(({ title, description }) => (
-            <div
-              key={title}
-              className="border border-white/30 px-5 py-10 text-center rounded-xl sm:flex-1"
-            >
-              <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
-                <IcosystemIcon />
-              </div>
-              <h3 className="mt-6 font-bold">{title}</h3>
-              <h3 className="mt-2 text-white/70">{description}</h3>
-            </div>
+            <Feature title={title} description={description} key={title} />
           ))}
         </div>
       </div>
