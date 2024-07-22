@@ -2,7 +2,7 @@
 import Image from "next/image";
 import AppImage from "../assets/images/App_night.png";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export const ProductShowcase = () => {
   const appImage = useRef<HTMLImageElement>(null);
